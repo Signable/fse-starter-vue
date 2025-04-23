@@ -47,18 +47,15 @@ const submit = () => {
                         :tabindex="1"
                         autocomplete="email"
                         v-model="form.email"
-                        placeholder="email@example.com" />
+                        placeholder="email@example.com"
+                    />
                     <InputError :message="form.errors.email" />
                 </div>
 
                 <div class="grid gap-2">
                     <div class="flex items-center justify-between">
                         <Label for="password">Password</Label>
-                        <TextLink
-                            v-if="canResetPassword"
-                            :href="route('password.request')"
-                            class="text-sm"
-                            :tabindex="5">
+                        <TextLink v-if="canResetPassword" :href="route('password.request')" class="text-sm" :tabindex="5">
                             Forgot password?
                         </TextLink>
                     </div>
@@ -69,13 +66,14 @@ const submit = () => {
                         :tabindex="2"
                         autocomplete="current-password"
                         v-model="form.password"
-                        placeholder="Password" />
+                        placeholder="Password"
+                    />
                     <InputError :message="form.errors.password" />
                 </div>
 
-                <div class="flex items-center justify-between" :tabindex="3">
+                <div class="flex items-center justify-between">
                     <Label for="remember" class="flex items-center space-x-3">
-                        <Checkbox id="remember" v-model="form.remember" :tabindex="4" />
+                        <Checkbox id="remember" v-model="form.remember" :tabindex="3" />
                         <span>Remember me</span>
                     </Label>
                 </div>

@@ -21,9 +21,7 @@ const submit = () => {
 </script>
 
 <template>
-    <AuthLayout
-        title="Confirm your password"
-        description="This is a secure area of the application. Please confirm your password before continuing.">
+    <AuthLayout title="Confirm your password" description="This is a secure area of the application. Please confirm your password before continuing.">
         <Head title="Confirm password" />
 
         <form @submit.prevent="submit">
@@ -37,7 +35,8 @@ const submit = () => {
                         v-model="form.password"
                         required
                         autocomplete="current-password"
-                        autofocus />
+                        autofocus
+                    />
 
                     <InputError :message="form.errors.password" />
                 </div>
